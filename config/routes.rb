@@ -1,4 +1,14 @@
 Party::Application.routes.draw do
+  get "parties/new"
+
+  get "hosts/new"
+
+  get "guests/new"
+
+  get "host/new"
+
+  get "sessions/new"
+
   get "pages/home"
 
   get "pages/signup"
