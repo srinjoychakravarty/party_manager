@@ -1,11 +1,10 @@
 Party::Application.routes.draw do
+
   get "parties/new"
 
   get "hosts/new"
 
   get "guests/new"
-
-  get "host/new"
 
   get "sessions/new"
 
@@ -16,6 +15,8 @@ Party::Application.routes.draw do
   get "pages/partydetails"
 
   get "pages/guestlist"
+  
+  root :to => 'hosts#new' 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
