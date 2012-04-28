@@ -130,8 +130,7 @@ GEM
       rack (>= 1.0)
       rack-test (>= 0.5.3)
 
-PLATFORMS
-  x86-mingw32
+
 
 DEPENDENCIES
   annotate!
