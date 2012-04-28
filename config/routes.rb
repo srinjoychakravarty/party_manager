@@ -1,22 +1,52 @@
 Party::Application.routes.draw do
 
-  get "parties/new"
+	get "parties/index"
+
+	get "parties/show"
+
+	get "parties/new"
+
+	post "parties/create"
+
+	get "parties/edit"
+
+	put "parties/update"
+  
+	delete "parties/destroy"
+  
+  
+  get "hosts/index"
+  
+  get "hosts/show"
 
   get "hosts/new"
 
-  get "guests/new"
+  post "hosts/create"
 
-  get "sessions/new"
+  get "hosts/edit"
 
-  get "pages/home"
+  put "hosts/update"
 
-  get "pages/signup"
+  delete "hosts/destroy"
 
-  get "pages/partydetails"
 
-  get "pages/guestlist"
+	get "guests/index"
   
-  root :to => 'hosts#new' 
+	get "guests/show"
+
+	get "guests/new"
+
+	post "guests/create"
+
+	get "guests/edit"
+
+	put "guests/update"
+  
+	delete "guests/destroy"
+
+ 
+  
+  root :to => 'parties#index' 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
