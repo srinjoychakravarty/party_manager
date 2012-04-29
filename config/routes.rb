@@ -1,7 +1,7 @@
 Party::Application.routes.draw do
 
 #  root :to => 'hosts#home' 
-map.home '/',  :controller => 'hosts', :action => 'home' 
+map.root :controller => "hosts"
 #get "hosts/home"
 #match "/hosts/home" => "hosts#home" 
 match "hosts/new" => "hosts#new"
