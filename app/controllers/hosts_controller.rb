@@ -9,7 +9,7 @@ class HostsController < ApplicationController
   end
   
   def new
-   @title = "New"
+   @title = "Sign Up"
   end
   
   def create
