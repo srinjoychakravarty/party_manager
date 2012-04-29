@@ -1,6 +1,9 @@
 Party::Application.routes.draw do
 
-  root :to => 'hosts#home' 
+#  root :to => 'hosts#home' 
+
+root :to => 'parties#new' 
+
 
  
 match '/signup' => 'hosts#new' 
