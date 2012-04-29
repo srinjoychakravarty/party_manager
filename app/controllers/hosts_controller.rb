@@ -1,18 +1,18 @@
 class HostsController < ApplicationController
 
- def index
-  end
-
   def show
+  @title = "Show"
   end
   
   def new
+   @title = "New"
   end
   
   def create
   end
   
   def edit
+  @title = "Edit"
   end
   
   def update
@@ -20,4 +20,5 @@ class HostsController < ApplicationController
   
   def destroy
   end
-end
+
+ end
