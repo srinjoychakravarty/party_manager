@@ -1,14 +1,11 @@
 Party::Application.routes.draw do
 
-  get "sessions/new"
-
   root :to => 'hosts#home' 
 
-
+match '/home' => 'hosts#home' 
 
 match '/signup' => 'hosts#new'
 match '/signin' => 'sessions#new'
-match 'hosts/new' => 'hosts#new'
 match 'hosts/show' => 'hosts#show'
 
 post "hosts/create"
