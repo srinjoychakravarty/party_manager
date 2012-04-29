@@ -2,38 +2,31 @@ Party::Application.routes.draw do
 
 #  root :to => 'hosts#home' 
 
-get "/guests/root_path" 
-#root :to => 'parties#new' 
+get "hosts/home"
+get "hosts/new"
+get "hosts/show"
+post "hosts/create"
+put "hosts/update" 
 
 
  
-match '/signup' => 'hosts#new' 
+#match '/signup' => 'hosts#new' 
 
-match '/signin' => 'sessions#new'
+#match '/signin' => 'sessions#new'
 
-	post "hosts/create"
-
-
-
-  put "hosts/update"
-  
-#	get "parties/index"
 	
-
-#	match 'parties/index' => 'parties#index'
-
-	match 'parties/show' => 'parties#show'
-
-	match 'parties/new' => 'parties#new'
-
-	post "parties/create"
-
-	match 'parties/edit' => 'parties#edit'
-
-	put "parties/update"
   
-	delete "parties/destroy"
+
   
+  get "parties/index"
+	 get "parties/show"
+	 get "parties/new"
+	 get "parties/edit"
+
+
+  
+	
+	
 	get "guests/index"
   
 	get "guests/show"
