@@ -2,7 +2,8 @@ Party::Application.routes.draw do
 
 #  root :to => 'hosts#home' 
 
-root :to => 'parties#new' 
+get "/guests/root_path" 
+#root :to => 'parties#new' 
 
 
  
@@ -12,7 +13,7 @@ match '/signin' => 'sessions#new'
 
 	post "hosts/create"
 
- 
+
 
   put "hosts/update"
   
