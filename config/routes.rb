@@ -1,11 +1,13 @@
 Party::Application.routes.draw do
 
+  get "home/home"
+
 	resources :hosts
 	resources :guests
 	resources :partyms
 	
 	
-  root :to => 'hosts#home' 
+  root :to => 'application#home' 
 
 match '/home' => 'hosts#home' 
 

@@ -1,8 +1,6 @@
 class HostsController < ApplicationController
 
-  def home
-  @title = "Home"
-  end
+ 
 
   def show
   #@title = "Show Host"
