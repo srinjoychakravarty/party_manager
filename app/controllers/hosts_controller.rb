@@ -1,7 +1,7 @@
 class HostsController < ApplicationController
 
 	def show
-  @title = @user.name
+ # @title = @host.first_name
   @host = Host.find(params[:id])
   end
   
