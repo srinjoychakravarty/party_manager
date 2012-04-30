@@ -10,9 +10,7 @@ gem 'sqlite3'
 
 group :development do
     gem 'rspec-rails'
-gem 'annotate', 
-:git => 'git://github.com/jeremyolliver/annotate_models.git', 
-:branch => 'rake_compatibility'	
+	
 end
 
 group :test do
@@ -20,7 +18,9 @@ group :test do
     gem 'webrat'
 end
 
-
+gem 'annotate', 
+:git => 'git://github.com/jeremyolliver/annotate_models.git', 
+:branch => 'rake_compatibility'
 
 
 # Gems used only for assets and not required
