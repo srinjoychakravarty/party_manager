@@ -7,9 +7,9 @@ Party::Application.routes.draw do
 	resources :partyms
 	
 	
-  root :to => 'application#home' 
+  root :to => 'home#home' 
 
-match '/home' => 'hosts#home' 
+match '/home' => 'home#home' 
 
 match '/signup' => 'hosts#new'
 match '/signin' => 'sessions#new'
