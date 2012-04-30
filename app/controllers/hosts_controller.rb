@@ -1,11 +1,8 @@
 class HostsController < ApplicationController
 
-  def home
-  @title = "Home"
-  end
-
-  def show
-  @title = "Show"
+	def show
+  @title = "Show Host"
+  @host = Host.find(params[:id])
   end
   
   def new

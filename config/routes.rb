@@ -1,8 +1,15 @@
 Party::Application.routes.draw do
 
-  root :to => 'hosts#home' 
+  get "home/home"
 
-match '/home' => 'hosts#home' 
+	resources :hosts
+	resources :guests
+	resources :partyms
+	
+	
+  root :to => 'home#home' 
+
+match '/home' => 'home#home' 
 
 match '/signup' => 'hosts#new'
 match '/signin' => 'sessions#new'
