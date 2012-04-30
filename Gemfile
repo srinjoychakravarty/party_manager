@@ -18,9 +18,9 @@ group :test do
     gem 'webrat'
 end
 
-gem 'annotate', 
-:git => 'git://github.com/jeremyolliver/annotate_models.git', 
-:branch => 'rake_compatibility'
+#gem 'annotate', 
+#:git => 'git://github.com/jeremyolliver/annotate_models.git', 
+#:branch => 'rake_compatibility'
 
 
 # Gems used only for assets and not required
