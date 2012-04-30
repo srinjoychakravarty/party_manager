@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120430013157) do
+ActiveRecord::Schema.define(:version => 20120430184513) do
 
   create_table "guests", :force => true do |t|
     t.integer  "party_id"
@@ -32,8 +32,10 @@ ActiveRecord::Schema.define(:version => 20120430013157) do
     t.string   "email"
     t.string   "username"
     t.string   "password"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "encrypted_password"
+    t.string   "salt"
   end
 
   add_index "hosts", ["email"], :name => "index_hosts_on_email", :unique => true
