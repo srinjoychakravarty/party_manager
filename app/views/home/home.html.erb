@@ -137,14 +137,10 @@ ul.nav a { zoom: 1; }  /* the zoom property gives IE the hasLayout trigger it ne
 <body>
 
 <div class="container">
-  <div class="header"><a href="#"><img src="/app/assets/images/cmu.jpg" alt="" name="Insert_logo" width="20%" height="90" id="Insert_logo" style="background: #8090AB; display:block;" /></a> 
-    <!-- end .header --><a href="#"><img src="/app/assets/images/party.jpg" width="400" height="268" /></a></div>
+  <div class="header">
+    <!-- end .header --><%= image_tag("party.jpg", :alt => "party feed") %> </div>
   <div class="sidebar1">
-    <ul class="nav">
-         <li><%= link_to "Home", '/home' %> </li>
-		 <li><%= link_to "Sign up", '/signup' %> </li>
-		 <li><%= link_to "Sign in", '/signin' %> </li>
-    </ul>
+   
   
     <ul class="nav">
 
