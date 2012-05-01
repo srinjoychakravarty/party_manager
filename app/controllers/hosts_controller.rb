@@ -13,7 +13,7 @@ class HostsController < ApplicationController
   def create
 	@host = Host.new(params[:host])
 	if @host.save
-	
+		redirect_to @host
 	else @title = "Sign Up"
 	render 'new'
     end
