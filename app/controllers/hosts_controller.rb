@@ -11,8 +11,14 @@ class HostsController < ApplicationController
   end
   
   def create
+	@host = Host.new(params[:host])
+	if @host.save
+	
+	else @title = "Sign Up"
+	render 'new'
+    end
   end
-  
+   
   def edit
   @title = "Edit"
   end
