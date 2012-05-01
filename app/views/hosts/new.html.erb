@@ -1,6 +1,26 @@
-<h1>Name</h1>
-<body> Username
-This is the /hosts/new page!
- </body>
+<h1>Sign up</h1>
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(@host) do |f| %>
+		
+			<%= f.label :first_name %>
+			<%= f.text_field :first_name %>
+			
+			<%= f.label :last_name %>
+			<%= f.text_field :last_name %>
+			
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+			
+			<%= f.label :password %>
+			<%= f.text_field :password %>
+			
+			<%= f.label :password_confirmation, "Confirmation" %>
+			<%= f.text_field :password_confirmation %>
+			
+			<%= f.submit "Create my account", ;class => "btn btn-large btn-primary" %>
+		<% end %>
+	</div>
+</div>	
 
 

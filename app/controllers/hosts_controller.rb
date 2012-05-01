@@ -6,6 +6,7 @@ class HostsController < ApplicationController
   end
   
   def new
+  @host = Host.new
    @title = "Sign Up"
   end
   
