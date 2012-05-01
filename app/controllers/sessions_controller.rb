@@ -4,7 +4,16 @@ class SessionsController < ApplicationController
   end
   
   def create
-	render 'new'
+	host = Host.authenticate(params[:session][:email], params[:session][:password])
+	
+	if host.nil?
+		flash.now[:error] = "Invalid email/password combination."
+		@title = "Sign in"
+		render 'new'
+	else
+		sign_in host
+		redirect_to host
+	end
   end
   
   def destroy
