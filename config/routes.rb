@@ -5,7 +5,7 @@ Party::Application.routes.draw do
 	resources :hosts
 	resources :guests
 	resources :partyms
-	
+	resources :sessions, :only => [:new, :create, :destroy]
 	
   root :to => 'home#home' 
 
