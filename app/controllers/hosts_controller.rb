@@ -13,7 +13,8 @@ class HostsController < ApplicationController
   def create
 	@host = Host.new(params[:host])
 	if @host.save
-		flash[:success] = "Welcome to the Sample App!"
+		sign_in @host
+		flash[:success] = "Welcome to the Party Manager!"
 		redirect_to @host
 	else 
 	@title = "Sign Up"

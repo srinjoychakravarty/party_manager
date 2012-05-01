@@ -5,7 +5,14 @@
 				<ul clas="nav pull-right">
 				    <li><%= link_to "Home", '/home' %> </li>
 					<li><%= link_to "Sign up", '/signup' %> </li>
+					<% if signed_in? %>
+					<li><%= link_to "Profile", current_host %> </li>
+					<% end %>
+					<% if signed_in? %>
+					<li><%= link_to "Sign out", '/signout' %> </li>
+					<% else %>
 					<li><%= link_to "Sign in", '/signin' %> </li>
+					<% end %>
 				</ul>
 			</nav>	
 		</div>

@@ -11,6 +11,17 @@ module SessionsHelper
 	def current_host
 		@current_host ||= host_from_remember_token
 	end
+	
+	def signed_in?
+		!current_host.nil?
+	end	
+	
+	def sign_out
+		cookies.delete(:remember_token)
+		self.current_host = nil
+	end
+	
+	private
 
 	def host_from_remember_token
 		Host.authenticate_with_salt(*remember_token)

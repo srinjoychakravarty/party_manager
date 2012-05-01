@@ -10,9 +10,10 @@ Party::Application.routes.draw do
   root :to => 'home#home' 
 
 match '/home' => 'home#home' 
-
+match 'home' => 'home#home' 
 match '/signup' => 'hosts#new'
 match '/signin' => 'sessions#new'
+match '/signout' => 'sessions#destroy'
 match 'hosts/show' => 'hosts#show'
 
 post "hosts/create"
