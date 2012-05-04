@@ -1,0 +1,10 @@
+<h1>All hosts</h1>
+
+<ul class ="hosts">
+	<% @hosts.each do |host| %>
+		<li>
+			<%= gravatar_for host, size: 52 %>
+			<%= link_to host.first_name, host.last_name, host %>
+		</li>
+	<% end %>
+</ul>	
