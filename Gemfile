@@ -8,6 +8,8 @@ gem 'bootstrap-sass'
 
 gem 'sqlite3'
 gem 'gravatar_image_tag'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development do
     gem 'rspec-rails'

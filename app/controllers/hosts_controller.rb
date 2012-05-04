@@ -4,7 +4,7 @@ class HostsController < ApplicationController
 
   def index
 	@title = "All Hosts"
-	@hosts = Host.all
+	@hosts = Host.paginate(:page => params[:page])
   end
 	
   def show
