@@ -8,9 +8,10 @@ gem 'bootstrap-sass'
 
 gem 'sqlite3'
 gem 'gravatar_image_tag'
+
 group :development do
     gem 'rspec-rails'
-	
+	gem 'faker'
 end
 
 group :test do
