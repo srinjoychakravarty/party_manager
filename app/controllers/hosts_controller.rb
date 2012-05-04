@@ -1,6 +1,7 @@
 class HostsController < ApplicationController
 	before_filter :authenticate, :only => [:index, :edit, :update]
 	before_filter :correct_host, :only => [:edit, :update]
+	before_filter :admin_host, :only => [:destroy]
 
   def index
 	@title = "All Hosts"
@@ -57,7 +58,14 @@ class HostsController < ApplicationController
  
   
   def destroy
+	Host.find(params[:id]).destroy
+	flash[:success] = "Host Annihilated"
+	redirect_to hosts_path
   end
 
+  def admin_host
+	redirect_to(root_path) unless current_host.admin?
+  end
+  
  end
  
