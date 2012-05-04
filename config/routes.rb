@@ -15,7 +15,7 @@ match '/signup' => 'hosts#new'
 match '/signin' => 'sessions#new'
 match '/signout' => 'sessions#destroy'
 match 'hosts/show' => 'hosts#show'
-match 'hosts' => 'hosts#index'
+match '/hosts' => 'hosts#index'
 
 post "hosts/create"
 put "hosts/update" 
