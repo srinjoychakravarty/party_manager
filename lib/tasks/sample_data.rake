@@ -6,6 +6,7 @@ namespace :db do
 					 email: "example@cmu.edu",
 					 password: "foobar",
 					 password_confirmation: "foobar")
+		admin.toggle!(:admin)			 
 		99.times do |n|
 			first_name = Faker::Name.first_name
 			last_name = Faker::Name.last_name
