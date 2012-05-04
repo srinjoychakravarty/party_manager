@@ -1,4 +1,6 @@
 class HostsController < ApplicationController
+	before_filter :authenticate, :only => [:edit, :update]
+	before_filter :correct_host, :only => [:edit, :update]
 
   def show
   @host = Host.find(params[:id])
@@ -21,13 +23,32 @@ class HostsController < ApplicationController
 	render 'new'
     end
   end
+  
+  private
+  
+  def authenticate
+	deny_access unless signed_in?
+  end
+  
+  def correct_host
+	@host = Host.find(params[:id])
+	redirect_to(root_path) unless current_host?(@host)
+  end	
    
   def edit
-  @host = Host.find(params[:id])
   @title = "Edit Host"
   end
   
   def update
+	@host = Host.find(params[:id])
+	if @host.update_attributes(params[:host])
+		flash[:success] = "Profile updated."
+		redirect_to @host
+	else
+		@title = 'Edit host'
+		render = 'edit'
+		end
+	end	
   end
   
   def destroy
