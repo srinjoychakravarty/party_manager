@@ -3,15 +3,19 @@
 		<div class="container">
 			<nav>
 				<ul clas="nav pull-right">
-				    <li><%= link_to "Home", '/home' %> </li>
-					<li><%= link_to "Sign up", '/signup' %> </li>
+				    <!--<li><%= link_to "Home", '/home' %> </li>-->
+					<li><%= link_to "Home", root_path %></li>
+					<li><%= link_to "Sign up", '/signup' %></li>
 					<% if signed_in? %>
 					<li><%= link_to "Profile", current_host %> </li>
+					<li><%= link_to "Settings", edit_host_path(current_host) %> </li>
 					<% end %>
 					<% if signed_in? %>
-					<li><%= link_to "Sign out", '/signout' %> </li>
+						<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+				<!--<li><%= link_to "Sign out", '/signout' %> </li>-->
 					<% else %>
-					<li><%= link_to "Sign in", '/signin' %> </li>
+					<li><%= link_to "Sign in", signin_path %>
+					<!--<li><%= link_to "Sign in", '/signin' %> </li>-->
 					<% end %>
 				</ul>
 			</nav>	

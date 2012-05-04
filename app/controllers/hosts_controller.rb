@@ -23,7 +23,8 @@ class HostsController < ApplicationController
   end
    
   def edit
-  @title = "Edit"
+  @host = Host.find(params[:id])
+  @title = "Edit Host"
   end
   
   def update

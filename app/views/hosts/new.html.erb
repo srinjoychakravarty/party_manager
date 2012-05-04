@@ -2,7 +2,7 @@
 <div class="row">
 	<div class="span6 offset3">
 		<%= form_for(@host) do |f| %>
-			<%= render 'partials/error_messages' %>
+			<%= render 'partials/error_messages', :object => f.object %>
 			<%= f.label :first_name %>
 			<%= f.text_field :first_name %>
 			
