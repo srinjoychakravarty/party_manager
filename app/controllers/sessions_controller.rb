@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
 		render 'new'
 	else
 		sign_in host
-		redirect_to host
+		redirect_back_or host
 	end
   end
   

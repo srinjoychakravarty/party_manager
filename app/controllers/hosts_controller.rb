@@ -1,7 +1,12 @@
 class HostsController < ApplicationController
-	before_filter :authenticate, :only => [:edit, :update]
+	before_filter :authenticate, :only => [:index, :edit, :update]
 	before_filter :correct_host, :only => [:edit, :update]
 
+  def index
+	@title = "All Hosts"
+	@hosts = Host.all
+  end
+	
   def show
   @host = Host.find(params[:id])
   @title = @host.first_name
@@ -47,11 +52,12 @@ class HostsController < ApplicationController
 	else
 		@title = 'Edit host'
 		render = 'edit'
-		end
-	end	
-  end
+	end
+   end	
+ 
   
   def destroy
   end
 
  end
+ 
